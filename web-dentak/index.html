@@ -4,14 +4,6 @@
     <!DOCTYPE html>
     <html>
     <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-      <meta property='og:type' content='website'>
-      <meta property='og:title' content='TSUBASA OMORI ポートフォリオ'>
-      <meta property='og:url' content='URLが入る'>
-      <meta property='og:description' content='TSUBASA OMORIのポートフォリオサイトです！'>
-      <meta property="og:image" content="img/ogp.png">
-      <meta name="description" content="SUBASA OMORIのポートフォリオサイトです！" />
       <title>TSUBASA OMORI ポートフォリオ</title>
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
       <link href="css/reset.css" media="all" rel="stylesheet" type="text/css" />
@@ -22,16 +14,28 @@
       <link rel=”canonical” href=”URLが入る” />
       <title>電卓アプリ</title>
   </head>
+
   <body>
-    <div>
-      <input type="text" id="num1">
-      <input type="text" id="num2">
+  
+    <h1><l1 class="fas fa-calculator my-skyblue"></l1> Web電卓</h1>
+
+    <div class="section-1">
+      <input type="text" id="num1" class="textbox">
+      <input type="text" id="num2" class="textbox">
     </div>
-    <button type="button" id="button-add">+</button>
-    <button type="button" id="button-sub">-</button>
-    <button type="button" id="button-mul">*</button>
-    <button type="button" id="button-div">/</button>
-    <div id="box"></div>
+
+    <div class="section-2">
+      <button type="button" id="button-add" class="btn-gradation">+</button>
+      <button type="button" id="button-sub" class="btn-gradation">−</button>
+      <button type="button" id="button-mul" class="btn-gradation">×</button>
+      <button type="button" id="button-div" class="btn-gradation">÷</button>
+    </div>
+
+    <div class="section-3">
+     <div id="box" class="textbox2"></div>
+    </div>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type='text/javascript' src="js/photoswipe/photoswipe.min.js"></script>
     <script type='text/javascript' src="js/photoswipe/photoswipe-ui-default.js"></script>
