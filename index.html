@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <html lang="ja">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
   <meta property='og:type' content='website'>
@@ -17,13 +18,19 @@
   <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="img/favicon.ico" />
   <link rel=”canonical” href=”URLが入る” />
+  <link rel="stylesheet" href="animate.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap');
+    </style>
 </head>
-
+  
+</body>
+</html>
 <body>
   <div class="wrapper">
 
     <!-- .gnav -->
-    <nav class="gnav" class="fixed">
+    <nav class="gnav fixed">
       <ul class="gnav-list">
         <li class="gnav-item"><a class="gnav-link" href="#works-section">WORKS</a></li>
         <li class="gnav-item"><a class="gnav-link" href="#feature-section">FEATURE</a></li>
@@ -37,16 +44,17 @@
     <!-- /.gnav -->
 
     <!-- .header -->
-    <header class="header">
-      <h1 class="logo">
-        <div class="logo-title">TSUBASA OMORI</div>
-        <div class="logo-subtitle">PORTFOLIO</div>
-      </h1>
-    </header>
+    <div class="fullMoon">
+      <header class="header">
+        <h1 class="logo">
+          <span class="logo-title animate__fadeInDown">TSUBASA OMORI</span>
+          <span class="logo-subtitle">PORTFOLIO</span>
+        </h1>
+      </header>
+    </div>
     <!-- /.header -->
-
+    <div class="milkyWay">
     <main class="content">
-
       <!-- .works-section -->
       <section class="works-section section" id="works-section">
         <div class="inner">
@@ -54,14 +62,14 @@
             <h2 class="heading-primary">WORKS</h2>
           </div>
           <div class="section-lead">
-            <p>製作の記録です。<br></p>
+            <p>製作の記録。<br></p>
           </div>
           <div class="section-body works">
             <div class="works-list js-my-gallery">
+
               <figure class="works-item">
                 <a href="img/works/tasklist.png" data-size="800x800" class="works-image-wrapper works-link hover-action">
-                  <img class="works-image lazyload fadein" src="img/placeholder4x3.png" data-src="img/works/tasklist.png"
-                    alt="" />
+                  <img class="works-image lazyload fadein" src="img/placeholder4x3.png" data-src="img/works/tasklist.png" alt="" />
                 </a>
                 <figcaption class="works-body">
                   <div class="works-title">タスク管理アプリ
@@ -71,13 +79,13 @@
                   </div>
                 </figcaption>
               </figure>
+
               <figure class="works-item">
                 <a href="img/works/Twitterclone.png" data-size="800x800"
                   class="works-image-wrapper works-link hover-action">
-                  <img class="works-image lazyload fadein" src="img/placeholder4x3.png"
-                    data-src="img/works/Twitterclone.png" alt="" />
+                  <img class="works-image lazyload fadein" src="img/placeholder4x3.png" data-src="img/works/Twitterclone.png" alt="" />
                 </a>
-                <figcaption class="works-body">
+               <figcaption class="works-body">
                   <div class="works-title">Twitterクローン</div>
                   <div class="works-text">HTML5 / Bootstrap /<br>PHP / Laravel / MySQL </div>
                   <div class="works-url"><a class="works-url-link" href="https://twitter-mitai.herokuapp.com/" target="_blank">Link</a>
@@ -87,12 +95,11 @@
 
               <figure class="works-item">
                 <a href="img/works/dentak.png" data-size="800x800" class="works-image-wrapper works-link hover-action">
-                  <img class="works-image lazyload fadein" src="img/works/dentak.png" data-src="img/works/dentak.png"
-                    alt="" />
+                  <img class="works-image lazyload fadein" src="img/placeholder4x3.png" data-src="img/works/dentak.png" alt="" />
                 </a>
                 <figcaption class="works-body">
                   <div class="works-title">Web電卓</div>
-                  <div class="works-text">HTML5 / JavaScript </div>
+                  <div class="works-text">HTML5 / CSS3 / JavaScript </div>
                   <div class="works-url"><a class="works-url-link" href="web-dentak/index.html" target="_blank">Link</a>
                   </div>
                 </figcaption>
@@ -100,8 +107,7 @@
 
               <figure class="works-item">
                 <a href="img/works/bookshelf.PNG" data-size="800x800" class="works-image-wrapper works-link hover-action">
-                  <img class="works-image lazyload fadein" src="img/works/bookshelf.PNG" data-src="img/works/bookshelf.PNG"
-                    alt="" />
+                  <img class="works-image lazyload fadein" src="img/placeholder4x3.png" data-src="img/works/bookshelf.PNG" alt="" />
                 </a>
                 <figcaption class="works-body">
                   <div class="works-title">みんなのオンライン本棚</div>
@@ -111,48 +117,49 @@
                 </figcaption>
               </figure>
 
-
             </div>
           </div>
         </div>
       </section>
+      </div>
       <!-- /.works-section -->
-
       <!-- .feature-section -->
-      <section class="feature-section section" id="feature-section">
-        <div class="inner">
-          <div class="section-heading">
-            <h2 class="heading-primary">FEATURE</h2>
-          </div>
-          <div class="section-lead">
-            <p>
-              人生初のオリジナルサイトの解説
-            </p>
-          </div>
-          <div class="section-body feature">
-            <div class="feature-item">
-              <div class="feature-image-wrapper">
-                <a href="https://bookoutput283.herokuapp.com/" target="_blank" class="hover-action"><img clas="feature-image"
-                    src="img/feature/bookoutputs.png" alt=""></a>
-              </div>
-              <div class="feature-body">
-                <p>
-                  <span class="text-bold">サイト名：</span><br>読書記録アプリ<br><a href="https://bookoutput283.herokuapp.com/" target="_blank">Link</a></p>
-                <p><span class="text-bold">使用スキル：</span><br>HTML5 / CSS3 /Bootstrap<br>PHP / Laravel / MySQL / S3(AWS)
-                <p><span
-                    class="text-bold"></span>コンセプト：<br>読書後、感動した言葉を記録し、今後の目標を立てるアプリ。
-                </p>
-                </p>
-                <p>一人でも多くの人が、形に残る読書ができますように。。。
-                </p>
+      <div class="fullMoon">
+        <section class="feature-section section" id="feature-section">
+          
+          <div class="inner">
+            <div class="section-heading">
+              <h2 class="heading-primary">FEATURE</h2>
+            </div>
+            <div class="section-lead">
+              <p>
+                人生初、オリジナルサイトの解説
+              </p>
+            </div>
+            <div class="section-body feature">
+              <div class="feature-item">
+                <div class="feature-image-wrapper">
+                  <a href="https://bookoutput283.herokuapp.com/" target="_blank" class="hover-action"><img class="feature-image"
+                      src="img/feature/bookoutputs.png" alt=""></a>
+                </div>
+                <div class="feature-body">
+                  <p>
+                    <span class="text-bold">サイト名：</span><br>読書記録アプリ<br><a href="https://bookoutput283.herokuapp.com/" target="_blank">Link</a></p>
+                  <p><span class="text-bold">使用スキル：</span><br>HTML5 / CSS3 /Bootstrap<br>PHP / Laravel / MySQL / S3(AWS)
+                  <p><span
+                      class="text-bold"></span>コンセプト：<br>読書後、感動した言葉を記録し、今後の目標を立てるアプリ。
+                  </p>
+                  <p>一人でも多くの人が、『形に残る読書』ができますように。。。</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <!-- /.feature-section -->
 
       <!-- .about-section -->
+      <div class="milkyWay">
       <section class="about-section section" id="about-section">
         <div class="inner">
           <div class="section-heading">
@@ -181,76 +188,77 @@
           </div>
         </div>
       </section>
+    </div>
       <!-- /.about-section -->
 
       <!-- .skill-section -->
-      <section class="skill-section section" id="skill-section">
-        <div class="inner">
-          <div class="section-heading">
-            <h2 class="heading-primary">SKILL</h2>
+      <div class="fullMoon">
+        <section class="skill-section section" id="skill-section">
+          <div class="inner">
+            <div class="section-heading">
+              <h2 class="heading-primary">SKILL</h2>
+            </div>
+            <div class="section-lead">
+              <p>
+                言語・開発環境・DB・フレームワーク・その他
+              </p>
+            </div>
+            <div class="section-body skill">
+              <div class="php-list">  
+                  <p><br>●PHP/Laravelコース
+                    <br>
+                    <br>【スキル】
+                    <br>言語：PHP、HTML5、CSS3
+                    <br>開発環境：Cloud9、Linux、Heroku、Git/GitHub
+                    <br>DB：MySQL
+                    <br>フレームワーク：Laravel、Bootstrap 
+                    <br>
+                    <br>
+                    <br>【学習内容】
+                    <br>・HTML/CSSの基本・ターミナルの基本・PHPの基礎
+                    <br>　- 文法の基礎
+                    <br>　- Webサーバを起動してPHPを自動実行
+                    <br>　- フォームデータの送受信
+                    <br>　- オブジェクト
+                    <br>　- 複数ファイルの連携
+                    <br>　- 名前空間
+                    <br>・MySQLの基礎
+                    <br>　- データベースの作成
+                    <br>　- テーブルの作成/操作/分析/結合
+                    <br>・PHP+MySQL
+                    <br>　- PHPとMySQLの連携
+                    <br>　- BookListの作成
+                    <br>・Git/GitHubの基本
+                    <br>・Bootstrapの使用
+                    <br>・Laravelでの開発
+                    <br>・Herokuの使用
+                  </p>
+                  <p><br>●フロントエンドコース
+                    <br>
+                    <br>【スキル】
+                    <br>言語：JavaScript、HTML5、CSS3
+                    <br>開発環境：Cloud9、Firebase、Vue.js
+                    <br>DB：Firebase
+                    <br>フレームワーク：jQuery、Bootstrap
+                    <br>その他：Web API(Flicker API) + Ajax
+                    <br>
+                    <br>【学習内容】
+                    <br>・Webサイト制作の流れ
+                    <br>・HTML/CSSの基本
+                    <br>・JavaScriptの文法
+                    <br>・エラーとデバッグ
+                    <br>・jQueryの基本
+                    <br>・DOMの操作
+                    <br>・Bootstrapの使用
+                    <br>・外部ライブラリの利用
+                    <br>・Web API
+                    <br>・BaaSの使用
+                  </p>
+                </div>
+            </div>
           </div>
-          <div class="section-lead">
-            <p>
-              言語・開発環境・DB・フレームワーク・その他
-            </p>
-          </div>
-          <div class="section-body skill">
-            <div class="php-list">  
-                <p><br>●PHP/Laravelコース
-                  <br>
-                  <br>【スキル】
-                  <br>言語：PHP、HTML5、CSS3
-                  <br>開発環境：Cloud9、Linux、Heroku、git/GitHub
-                  <br>DB：MySQL
-                  <br>フレームワーク：Laravel、Bootstrap 
-                  <br>
-                  <br>
-                  <br>【学習内容】
-                  <br>・HTML/CSSの基本・ターミナルの基本・PHPの基礎
-                  <br>　- 文法の基礎
-                  <br>　- Webサーバを起動してPHPを自動実行
-                  <br>　- フォームデータの送受信
-                  <br>　- オブジェクト
-                  <br>　- 複数ファイルの連携
-                  <br>　- 名前空間
-                  <br>・MySQLの基礎
-                  <br>　- データベースの作成
-                  <br>　- テーブルの作成/操作/分析/結合
-                  <br>・PHP+MySQL
-                  <br>　- PHPとMySQLの連携
-                  <br>　- BookListの作成
-                  <br>・Git/GitHubの基本
-                  <br>・Bootstrapの使用
-                  <br>・Laravelでの開発
-                  <br>・Herokuの使用
-                </p>
-
-                <p><br>●フロントエンドコース
-                  <br>
-                  <br>【スキル】
-                  <br>言語：JavaScript、HTML5、CSS3
-                  <br>開発環境：Cloud9、Firebase、Vue.js
-                  <br>DB：Firebase
-                  <br>フレームワーク：jQuery、Bootstrap
-                  <br>その他：Web API(Flicker API) + Ajax
-                  <br>
-                  <br>【学習内容】
-                  <br>・Webサイト制作の流れ
-                  <br>・HTML/CSSの基本
-                  <br>・JavaScriptの文法
-                  <br>・エラーとデバッグ
-                  <br>・jQueryの基本
-                  <br>・DOMの操作
-                  <br>・Bootstrapの使用
-                  <br>・外部ライブラリの利用
-                  <br>・Web API
-                  <br>・BaaSの使用
-                </p>
-              </div>
-          </div>
-        </div>
-      </section>
-
+        </section>
+      </div>
     </main>
 
     <!-- .footer -->
@@ -334,11 +342,11 @@
 
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type='text/javascript' src="js/photoswipe/photoswipe.min.js"></script>
-  <script type='text/javascript' src="js/photoswipe/photoswipe-ui-default.js"></script>
-  <script type='text/javascript' src="js/photoswipe/photoswipe-setup.js"></script>
-  <script type='text/javascript' src="js/lazysizes/lazysizes.min.js"></script>
-  <script type='text/javascript' src="js/script.js"></script>
+  <script src="js/photoswipe/photoswipe.min.js"></script>
+  <script src="js/photoswipe/photoswipe-ui-default.js"></script>
+  <script src="js/photoswipe/photoswipe-setup.js"></script>
+  <script src="js/lazysizes/lazysizes.min.js"></script>
+  <script src="js/script.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
 </body>
 </html>
