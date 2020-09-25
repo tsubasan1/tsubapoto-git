@@ -148,7 +148,8 @@ li {
   left: 0;
   z-index: 100;
   width: 100%;
-  background-color: #fff;
+  background-image: -webkit-linear-gradient(bottom, #F4F4F4 0%, #DFDEDC 100%);
+  background-image: linear-gradient(to top, #F4F4F4 0%, #DFDEDC 100%); 
   -webkit-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
   -moz-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
   box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
