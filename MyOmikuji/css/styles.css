@@ -1,0 +1,61 @@
+body{
+    background: skyblue; 
+    font-family: 'Noto Serif JP', serif;
+}
+.omikuji {
+    position: relative;
+    }
+    h1 {
+        position: relative;
+        padding: 0.6em;
+        background: #e0edff;
+        text-align: center;
+      }
+      
+    h1:after {
+        position: absolute;
+        content: '';
+        top: 100%;
+        left: 48%;
+        border: 15px solid transparent;
+        border-top: 15px solid #e0edff;
+        width: 0;
+        height: 0;
+      }    
+    .omikuji #btn {/*classがfaのアイコンに対して*/
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;/*余計な隙間を除く*/
+    padding:0;/*余計な隙間を除く*/
+    color: white;/*アイコン色*/
+    font-size: 40px;/*サイズ*/
+    }
+  
+  .omikuji img {
+    width: 100%;
+    opacity: 0.6;
+    }
+    #btn{
+        width: 150px;
+        height: 150px;
+        background: red;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 150px;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 10px 0 #d1483d;
+        user-select: none;
+    }
+
+    #btn:hover{
+        opacity: 0.9px;
+    }
+
+    #btn:active{
+        box-shadow: 0 5px 0 #d1483d;
+    }
