@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>成長記録サイト</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/fixmenu_pagetop.js"></script>
+<style>@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap');</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(function(){
+    $('a[href^="#"]').click(function() {
+        var speed = 800;
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $('body,html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+    });
+});
+</script>
+<script type="text/javascript">
+//今日の日時を表示
+window.onload = function () {
+//今日の日時を表示
+    var date = new Date()
+    var year = date.getFullYear()
+    var month = date.getMonth() + 1
+    var day = date.getDate()
+
+    var toTwoDigits = function (num, digit) {
+        num += ''
+        if (num.length < digit) {
+            num = '0' + num
+        }
+        return num
+    }
+
+    var yyyy = toTwoDigits(year, 4)
+    var mm = toTwoDigits(month, 2)
+    var dd = toTwoDigits(day, 2)
+    var ymd = yyyy + "-" + mm + "-" + dd;
+
+    document.getElementById("today").value = ymd;
+}
+</script>
+
+</head>
+
+<body>
+
+    <header>
+        <div id="top">
+            <h1>毎日プチ成長</h1>
+            <p>〜あなたの小さな積み重ねが、やがて大きな力になる〜</p>    
+        </div>    
+        <nav id="menubar">
+            <ul>
+                <li><a href="#new">書き留める</a></li>
+                <li><a href="#company">振り返る</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--/#new-->
+    <section id="new">
+        <section id="login" class="view">
+            <div class="intro">
+                <h1>今日の成長</h1>
+                <p>〜さぁ、書き留めに行こう〜</p>        
+                    <form id="login-form">
+                        <div class="login">
+                            <input type="email" id="login-email" placeholder="username" name="user"><br>
+                            <input type="password" id="login-password" placeholder="password" name="password"><br>
+                            <input type="submit" id="login-button" value="Login">
+                        </div>
+                    </form>
+            </div>
+        </section>
+
+        <div id="toukou" class="view">
+            <div class="intro">
+                <h1>今日の成長</h1>
+                <p>〜ここに書き留めよう〜</p>
+                <div class="toukou">
+                    <form id="comment-form">
+                        <input type="date" id="today"><br>
+                        <input type="text" id="comment-form__text" placeholder="今日は〇〇をした。"><br>
+                        <input type="submit" id="massage-button" value="記録する。" onClick="alert('投稿が完了しました！下の表を確認してみましょう！');">
+                    </form>
+                </div>
+                <form id="logout-form">
+                    <div class="logout">
+                        <a id="logout__link" href="#" class="dropdown-item">ログアウト</a>
+                    </div>
+                </form>                
+            </div>
+        </div>
+    </section>
+    
+    <!--/#new-->
+    <!--/#company-->
+    <section id="company">
+
+        <div id="targetTable" class="intro2">
+                <h1>これまでの私</h1>
+                <p>〜過去を振り返る〜</p>
+                <table class="type06">
+                    <thead>
+                      <th>日付</th>
+                      <th>その日したこと</th>
+                      <th>削除</th>
+                    </thead>
+                    <tbody id="toukou-list" class="type06">
+                    <tr>
+                        <td>例：2020-10-16</td>
+                        <td>例：読書を10分した</td>
+                        <td><button class="btn btn-danger toukou-item__delete">削除</button></td>
+                    </tr>
+                    </tbody> 
+                </table>
+            </div>
+    </section>
+    <!--/#company-->
+<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+<footer>
+<small>Copyright&copy; <a href="index.html">everyday growing</a> All Rights Reserved.</small>
+</footer>
+
+<!--ページの上部に戻る「↑」ボタン-->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+
+ <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#config-web-app
+      (使いたいFirebaseサービス用のSDKを加えます) -->
+      <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+<script>
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+var firebaseConfig = {
+    apiKey: "AIzaSyCsXqEO8MDcyuJks-8zGg6Sc0k2JI-K7_U",
+    authDomain: "everyday-growing.firebaseapp.com",
+    databaseURL: "https://everyday-growing.firebaseio.com",
+    projectId: "everyday-growing",
+    storageBucket: "everyday-growing.appspot.com",
+    messagingSenderId: "862695012333",
+    appId: "1:862695012333:web:724c7a12fe0efc4dcbd9e4",
+    measurementId: "G-4J0G0CDTFX"
+};
+    // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/main.js"></script>
+
+  
+</body>
+</html>

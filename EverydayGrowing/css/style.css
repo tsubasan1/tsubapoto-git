@@ -1,0 +1,315 @@
+@charset "utf-8";
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+html,body {height: 100%;}
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Noto Serif JP', serif;
+	line-height: 2;		/*行間*/
+	background: #374c55;;	/*背景色*/
+	-webkit-text-size-adjust: none;
+}
+body h1{
+	font-size: 50px;
+}
+body p{
+	font-size: 20px;
+}
+ul {list-style-type: none;}
+ol {padding-left: 40px;padding-bottom: 15px;}
+
+
+/*リンク（全般）設定
+---------------------------------------------------------------------------*/
+a {
+	color: #333;		/*リンクテキストの色*/
+	transition: 0.5s;	/*マウスオン時の移り変わるまでの時間設定。0.5秒。*/
+}
+a:hover {
+	color: #ff4765;			/*マウスオン時の文字色*/
+	text-decoration: none;	/*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
+}
+
+/*ヘッダー（一番上の、ロゴやメニューが入っているブロック）
+---------------------------------------------------------------------------*/
+header {
+	height: 100%;
+	overflow: auto;
+	position: relative;
+	background: url(../images/phonto\ 2.PNG) no-repeat center center / cover;	/*背景画像の読み込み*/
+}
+/*トップページ*/
+header #top {
+	color: white;
+	text-align: center;
+	background-color:rgba(255,140,0,0.6);
+	top: 50%;
+	left: 50%;
+	transform: translate(0%,50%);
+	margin:0;
+	padding:0;
+}
+header #top p{
+	font-size: 20px;
+	color: white;
+	text-align: center;	
+	padding-bottom: 20px;
+}
+
+
+/*メニュー
+---------------------------------------------------------------------------*/
+/*メニューブロック全体への指定*/
+#menubar {
+	position: absolute;
+	bottom: 20%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
+	font-size: 20px;
+	width: 100%;
+	text-align: center;
+    background-color:rgba(255,140,0,0.6);
+	padding-top: 10px;
+}
+/*メニュー１個あたりの指定*/
+#menubar li {
+	display: inline-block;
+	margin: 0 1%;
+	animation-name: opa1;
+	animation-delay: 1S;
+	animation-duration: 1S;
+	animation-fill-mode: both;
+}
+#menubar li a {
+	text-decoration: none;display: block;text-align: center;
+	width: 140px;	/*メニューの幅*/
+	color: #fff;	/*文字色*/
+	border-bottom: 2px solid transparent;	/*下線の幅、線種、色。transparentは透明の事。*/
+	padding-bottom: 7px;	/*下線と文字の間にとる余白*/
+}
+/*マウスオン時の指定*/
+#menubar li a:hover {
+	border-bottom: 2px solid #fff;	/*下線の幅、線種、色*/
+	letter-spacing: 0.1em;			/*文字間隔を少しだけ広くする指定。そのままがいいならこの１行を削除。*/
+}
+
+/*フッター設定
+---------------------------------------------------------------------------*/
+footer {
+	clear: both;
+	text-align: center;
+	background: #374c55;	/*背景色*/
+	color: #fff;		/*文字色*/
+	font-size: 85%;		/*文字サイズ*/
+}
+footer a {
+	color: #fff;	/*リンクテキストの文字色*/
+	text-decoration: none;
+}
+footer a:hover {
+	color: #fff;	/*マウスオン時の文字色*/
+}
+
+/*ログイン画面
+---------------------------------------------------------------------------*/
+.login input[type=email]{
+    width: 250px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 2px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+	padding: 4px;
+	margin-top: 20px;
+}
+
+.login input[type=password]{
+    width: 250px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 2px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px;
+    margin-top: 10px;
+}
+
+.login input[type=submit]{
+    width: 260px;
+    height: 35px;
+    background: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #a18d6c;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.login input[type=submit]:hover{
+    opacity: 0.8;
+}
+
+.login input[type=submit]:active{
+    opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=password]:focus{
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=submit]:focus{
+    outline: none;
+}
+
+/*newセクションの設定*/
+#message-template {
+  display: none;
+}
+
+#new {
+	height: 100%;
+	background: url(../images/writing.jpg) no-repeat center center / cover;	/*背景画像の読み込み*/
+	color: white;/*文字は白に*/	
+	
+}
+
+.intro{
+	background-color:rgba(10,10,10,0.4);
+	text-align: center;
+	color: white;
+	top: 50%;
+	left: 50%;
+	transform: translate(0%,25%);
+	margin:0 !important;
+	padding:0 !important;
+}
+
+.toukou input[type=date]{
+	width: 80%;
+	height: 70px;    
+	border: 3px solid rgba(255,255,255,0.6);
+	border-radius: 7px;
+	font-size: 30px;
+	text-align: center;
+	padding: 4px;
+	color: white;
+	font-family: 'Noto Serif JP', serif;
+	background: transparent;
+	margin-bottom: 20px;
+}
+.toukou input[type=text]{
+    width: 80%;
+    height: 70px;    
+    border: 3px solid rgba(255,255,255,0.6);
+    border-radius: 7px;
+    font-size: 30px;
+    text-align: center;
+    padding: 4px;
+    color: white;
+    font-family: 'Noto Serif JP', serif;
+    background: transparent;
+}
+
+.toukou input[type=submit]{
+    width: 60%;
+    height: 40px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.toukou input[type=submit]:hover{
+    opacity: 0.8;
+}
+
+.toukou input[type=submit]:active{
+    opacity: 0.6;
+}
+
+.toukou input[type=submit]:focus{
+    outline: none;
+}
+
+.dropdown-item{
+	color:white;
+}
+
+/*companyセクションの設定*/
+.intro2{
+	background-color:rgba(10,10,10,0.4);
+	text-align: center;
+	color: white;
+	padding-bottom:50px;
+}
+
+#company {
+	height: 100%;
+	overflow: auto;
+	position: relative;
+	background: url(../images/rogu.jpg) no-repeat center center / cover;	/*背景画像の読み込み*/
+
+}
+
+/*テーブル
+---------------------------------------------------------------------------*/
+/*テーブル１行目に入った見出し部分（※caption）*/
+table.type06{
+    margin: auto;
+    background-color: white;
+	width: 80%;
+	color: black;
+}
+
+table, th, td {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  line-height: 1.5;
+  text-align: center;
+  padding: 10px;
+}
+
+table.type06 th {
+  font-weight: bold;
+  background: #3f3f3f;
+  color: #ffffff;
+}
+
+/*PAGE TOP（↑）設定
+---------------------------------------------------------------------------*/
+body .nav-fix-pos-pagetop a {
+	display: none;
+}
+body.is-fixed-pagetop .nav-fix-pos-pagetop a {
+	display: block;text-decoration: none;text-align: center;position: fixed;animation-name: opa1;animation-duration: 1s;animation-fill-mode: forwards;
+	width: 60px;		/*ボタンの幅*/
+	line-height: 60px;	/*ボタンの高さ*/
+	bottom: 50px;		/*画面の下からの配置場所指定*/
+	right: 3%;			/*画面の右からの配置場所指定*/
+	background: #555;	/*背景色（古いブラウザ用）*/
+	background: rgba(0,0,0,0.5);	/*背景色。0,0,0は黒の事で、0.5は色が50%出た状態の事。*/
+	color: #fff;		/*文字色*/
+	border-radius: 50%;	/*円形にする指定。この１行を削除すると正方形になります。*/
+}
+body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
+	background: #999;	/*マウスオン時の背景色*/
+}
